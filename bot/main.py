@@ -3,7 +3,7 @@ import os
 from discord.ext import commands
 
 
-bot = commands.Bot()
+bot = commands.Bot(command_prefix = "!")
 TOKEN = os.getenv("DISCORD_TOKEN")
 
 @bot.slash_command(name="runnit")
