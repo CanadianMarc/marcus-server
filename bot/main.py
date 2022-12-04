@@ -10,10 +10,4 @@ TOKEN = os.getenv("DISCORD_TOKEN")
 async def first_slash(ctx): 
     await ctx.respond("You executed the slash command!")
 
-@bot.event
-async def on_ready():
-    await tree.sync()
-    print(f"Logged in as {bot.user.name}({bot.user.id})")
-
-if __name__ == "__main__":
-    bot.run(TOKEN)
+bot.run(TOKEN)
