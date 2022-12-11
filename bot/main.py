@@ -1,9 +1,11 @@
 import os
-import discord.ext
+import discord
+from discord import app_commands
+from discord.ext import commands
 
 intents = discord.Intents.default()
 client = discord.Client(intents=intents)
-tree = discord.commands.CommandTree(client)
+tree = discord.app_commands.CommandTree(client)
 TOKEN = os.getenv("DISCORD_TOKEN")
 
 @client.event
